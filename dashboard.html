@@ -18,11 +18,19 @@
         <img src="QP_TM.png" alt="School Logo">
     </div>
     <nav>
-        <a href="home.html">Home</a>
-        <a href="home.html">Contents</a>
-        <a href="dashboard.html">Message</a>
-        <a href="#" onclick="logout(event)" class="logout-btn">Logout</a>
-    </nav>
+    <div class="nav-left">
+        <a href="#home"><img src="home.svg" alt="Home"></a>
+        <a href="#contents"><img src="contents.svg" alt="Contents"></a>
+        <a href="dashboard.html" class="message-btn">
+            <img src="message.svg" alt="Message">&nbsp;&nbsp;
+            <span>Message the School</span>
+        </a>
+    </div>
+
+    <a href="#" onclick="logout(event)" class="logout-btn">
+        <img src="logout.svg" alt="Logout">
+    </a>
+</nav>
 </header>
 
 <div class="container">
@@ -43,4 +51,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
