@@ -1,0 +1,199 @@
+/* -------------------- GENERAL -------------------- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Poppins', 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f9f8;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Prevent input overflow */
+input, textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    color: white;
+    padding: 10px 5px;
+}
+
+/* Logo */
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header .logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* -------------------- NAVBAR -------------------- */
+header nav {
+    display: flex;
+    flex-direction: row;      /* ✅ ALWAYS horizontal */
+    flex-wrap: nowrap;        /* ✅ NEVER wrap */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow-x:auto;         /* ✅ Scroll instead of stacking */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Hide ugly scrollbar on mobile */
+header nav::-webkit-scrollbar {
+    height: 5px;
+}
+
+header nav::-webkit-scrollbar-thumb {
+    background: #527fb9;
+    border-radius: 5px;
+}
+
+header nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+/* Normal hover */
+header nav a:hover {
+    background-color: #3095bd;
+    color: #bcffe3;
+}
+
+/* Logout styling */
+header nav a.logout-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+header nav a.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* -------------------- SECTIONS -------------------- */
+.section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.section h1, 
+.section h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 10px auto;
+}
+
+.section img {
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* -------------------- CONTAINER -------------------- */
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.container h2 {
+    text-align: center;
+    color: #2196f3;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #2196f3;
+}
+
+/* -------------------- CARDS -------------------- */
+.card {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+}
+
+.card strong {
+    color: #4caf50;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* -------------------- MOBILE FIX -------------------- */
+@media (max-width: 480px) {
+    .section img {
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+    }
+}

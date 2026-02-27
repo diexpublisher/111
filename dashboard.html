@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    
+</head>
+<header>
+    <div class="logo">
+        <img src="QP_TM.png" alt="School Logo">
+    </div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="home.html">About</a>
+        <a href="home.html">Contents</a>
+        <a href="dashboard.html">Message</a>
+        <a href="#" onclick="logout(event)" class="logout-btn">Logout</a>
+    </nav>
+</header>
+<body onload="checkLogin(); loadStudentMessages();">
+
+<div class="container">
+    <h2>Send Message to Principal</h2>
+    <textarea id="message" placeholder="Type your concern here..."></textarea>
+    <button onclick="sendMessage()">Send Message</button>
+
+    <h3>Your Messages</h3>
+    <div id="studentMessages">
+        <!-- JS will generate message cards here -->
+        <div class="card">
+            <strong>Your Name</strong>
+            <p>Your Message</p>
+            <p>Message Status</p>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
