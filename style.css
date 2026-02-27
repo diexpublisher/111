@@ -57,13 +57,16 @@ header .logo img {
 /* -------------------- NAVBAR -------------------- */
 header nav {
     display: flex;
-    flex-direction: row;      /* ✅ ALWAYS horizontal */
-    flex-wrap: nowrap;        /* ✅ NEVER wrap */
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+
     gap: 5px;
-    overflow-x:auto;         /* ✅ Scroll instead of stacking */
-    -webkit-overflow-scrolling: touch;
+
+    overflow-x: auto;
+    white-space: nowrap;
+
+    justify-content: flex-start;   /* 🔥 CHANGE THIS */
+    padding: 0 10px;               /* small breathing space */
 }
 
 /* Hide ugly scrollbar on mobile */
@@ -197,3 +200,4 @@ footer p {
     }
 
 }
+
